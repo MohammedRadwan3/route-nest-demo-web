@@ -34645,7 +34645,7 @@ $iUo:1}
 A.aQI.prototype={
 $1(a){var s=A.dx().b
 s=s==null?null:s.canvasKitBaseUrl
-return(s==null?"https://www.gstatic.com/flutter-canvaskit/4d35714800b9266b6693a58e1225ecd7e9e45ed7/":s)+a},
+return(s==null?"canvaskit/":s)+a},
 $S:39}
 A.PA.prototype={
 l(){if(this.b)return
