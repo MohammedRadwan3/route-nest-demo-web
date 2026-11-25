@@ -1,67 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/route-nest-demo-web/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!--
-    Uncomment the tag below to lay the app out underneath the parts of the
-    screen that the device obstructs, such as a display cutout, the rounded
-    corners of the screen, or a home indicator.
-
-    Without it, the browser keeps the app clear of them, and `SafeArea` and
-    `MediaQuery.paddingOf` report no padding. With it, the app covers the whole
-    screen, and it is up to the app to keep its own content out of the way,
-    which is what `SafeArea` is for.
-  -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> -->
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="routenest_app">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>routenest_app</title>
-  <link rel="manifest" href="manifest.json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RouteNest development preview</title>
+<style>
+  body{margin:0;background:#F7F6F2;color:#184E4A;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+  main{max-width:520px;margin:0 auto;padding:28px 18px 40px}
+  h1{font-size:24px;margin:0 0 6px}
+  p{margin:0 0 14px}
+  .note{background:rgba(24,78,74,.08);border:1px solid rgba(24,78,74,.25);border-radius:14px;padding:12px 14px;font-size:14px}
+  a.card{display:block;text-decoration:none;color:inherit;border:1px solid rgba(24,78,74,.3);border-radius:16px;padding:14px 16px;margin:12px 0;background:#F7F6F2}
+  a.card:active,a.card:hover{background:rgba(24,78,74,.1)}
+  .t{font-weight:700;font-size:17px}
+  .s{font-size:13px;opacity:.85}
+  code{font-size:13px}
+</style>
 </head>
 <body>
-  <div id="rn-boot" style="font-family:sans-serif;color:#184E4A;background:#F7F6F2;position:fixed;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;z-index:0">Loading RouteNest preview...</div>
-  <script>
-    // Shows a message instead of a blank page when the app cannot start (for example a blocked or slow script).
-    (function () {
-      var boot = document.getElementById('rn-boot');
-      var t = setInterval(function () { if (document.querySelector('flt-glass-pane')) { clearInterval(t); setTimeout(function () { if (boot) boot.remove(); }, 800); } }, 300);
-      setTimeout(function () { if (boot && !document.querySelector('flt-glass-pane')) boot.textContent = 'The preview did not start. Reload the page, or try another browser. Development preview with fictional data.'; }, 25000);
-    })();
-  </script>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
-
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
-  <script src="flutter_bootstrap.js" async></script>
+<main>
+  <h1>RouteNest development preview</h1>
+  <p class="note">Fictional demo data bundled in each app. No live backend, nothing is saved to a server, and changes reset when the page reloads. Browser versions of the Flutter apps, not native iOS or Android apps.</p>
+  <p>Choose an app. On each login screen tap the account chip, then sign in. Password for every demo account: <code>password</code>.</p>
+  <a class="card" href="driver/"><div class="t">Driver</div><div class="s">driver1@routenest.test</div></a>
+  <p class="s" style="margin:-6px 6px 6px"><a href="downloads/routenest-driver-demo-r2-arm64.apk">Android APK</a> (arm64, development build, RouteNest Driver)</p>
+  <a class="card" href="supervisor/"><div class="t">Supervisor</div><div class="s">supervisor1@routenest.test</div></a>
+  <p class="s" style="margin:-6px 6px 6px"><a href="downloads/routenest-supervisor-demo-r2-arm64.apk">Android APK</a> (arm64, development build, RouteNest Supervisor)</p>
+  <a class="card" href="parent/"><div class="t">Parent</div><div class="s">parent1@routenest.test</div></a>
+  <p class="s" style="margin:-6px 6px 6px"><a href="downloads/routenest-parent-demo-r2-arm64.apk">Android APK</a> (arm64, development build, RouteNest Parent)</p>
+  <a class="card" href="student/"><div class="t">Student</div><div class="s">student1@routenest.test</div></a>
+  <p class="s" style="margin:-6px 6px 6px"><a href="downloads/routenest-student-demo-r2-arm64.apk">Android APK</a> (arm64, development build, RouteNest Student)</p>
+  <a class="card" href="customer/"><div class="t">Customer (rides)</div><div class="s">customer1@routenest.test</div></a>
+  <p class="s" style="margin:-6px 6px 6px"><a href="downloads/routenest-customer-demo-r2-arm64.apk">Android APK</a> (arm64, development build, RouteNest Rides)</p>
+  <p class="note">Android APKs: debug-signed development builds for arm64 phones only, with the same fictional data and no backend. They have never been launched on a device by me. If one was installed from an earlier link, remove it first. Anyone with this page can download them. No iOS app exists.</p>
+  <p class="s">Maps load OpenStreetMap tiles from tile.openstreetmap.org. Admin, company and school dashboards are Laravel web pages and are not part of this preview.</p>
+</main>
 </body>
 </html>

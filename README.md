@@ -1,7 +1,5 @@
-# RouteNest driver web preview
+# RouteNest development preview
 
-Development preview of the RouteNest driver app (Flutter web build). It uses fictional demo data bundled in the app. There is no live backend and nothing is saved to a server.
+Browser previews and Android development builds (arm64, debug-signed) of the RouteNest Flutter apps: driver, supervisor, parent, student, customer. They use fictional demo data bundled in each app. There is no live backend and nothing is saved to a server.
 
-Sign in with `driver1@routenest.test` / `password` (or tap the driver1 chip).
-
-The map screens load OpenStreetMap tiles from tile.openstreetmap.org.
+Open the site root to choose an app. Demo accounts are `<role>1@routenest.test`, password `password`.
